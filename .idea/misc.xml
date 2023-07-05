@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisProjectProfileManager">
+    <option name="PROJECT_PROFILE" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+    <list size="0" />
+  </component>
+  <component name="CheckStyle-IDEA" serialisationVersion="2">
+    <checkstyleVersion>10.3.4</checkstyleVersion>
+    <scanScope>JavaOnly</scanScope>
+    <option name="thirdPartyClasspath" />
+    <option name="activeLocationIds">
+      <option value="3907fe54-e307-4ffe-8490-062b5e3a5956" />
+    </option>
+    <option name="locations">
+      <list>
+        <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="bundled-google-checks" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="3907fe54-e307-4ffe-8490-062b5e3a5956" type="LOCAL_FILE" scope="All" description="Tsie">
+          $USER_HOME$/Work/checkstyle.xml
+          <option name="properties">
+            <map>
+              <entry key="org.checkstyle.google.suppressionfilter.config" value="" />
+              <entry key="org.checkstyle.google.suppressionxpathfilter.config" value="" />
+            </map>
+          </option>
+        </ConfigurationLocation>
+      </list>
+    </option>
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="JPAMappingSettings">
+    <option name="jpaMappings">
+      <list>
+        <ConfigurableJPAMapping>
+          <option name="family" value="H2" />
+          <option name="javaDataType" value="Long" />
+          <option name="sqlDataType" value="BIGINT" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="H2" />
+          <option name="javaDataType" value="java.sql.Date" />
+          <option name="sqlDataType" value="DATE" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="H2" />
+          <option name="sqlDataType" value="VARCHAR" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="Long" />
+          <option name="sqlDataType" value="bigint" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="Boolean" />
+          <option name="sqlDataType" value="bit" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="java.sql.Date" />
+          <option name="sqlDataType" value="date" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="java.sql.Timestamp" />
+          <option name="sqlDataType" value="datetime" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="BigDecimal" />
+          <option name="sqlDataType" value="decimal" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="Double" />
+          <option name="sqlDataType" value="double" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="sqlDataType" value="enum" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="Float" />
+          <option name="sqlDataType" value="float" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="Integer" />
+          <option name="sqlDataType" value="int" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="sqlDataType" value="json" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="Integer" />
+          <option name="sqlDataType" value="smallint" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="sqlDataType" value="text" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="java.sql.Timestamp" />
+          <option name="sqlDataType" value="timestamp" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="javaDataType" value="java.lang.Byte" />
+          <option name="sqlDataType" value="tinyint" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="MySQL" />
+          <option name="sqlDataType" value="varchar" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="javaColumnDefinition" value="CHAR" />
+          <option name="sqlDataType" value="CHAR" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="javaDataType" value="java.sql.Date" />
+          <option name="sqlDataType" value="DATE" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="javaDataType" value="Float" />
+          <option name="sqlDataType" value="FLOAT" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="javaDataType" value="Long" />
+          <option name="sqlDataType" value="NUMBER" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="javaDataType" value="java.sql.Timestamp" />
+          <option name="sqlDataType" value="TIMESTAMP" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping />
+        <ConfigurableJPAMapping>
+          <option name="family" value="PostgreSQL" />
+          <option name="javaDataType" value="Long" />
+          <option name="sqlDataType" value="bigint" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="PostgreSQL" />
+          <option name="javaDataType" value="Boolean" />
+          <option name="sqlDataType" value="boolean" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="PostgreSQL" />
+          <option name="javaDataType" value="java.sql.Date" />
+          <option name="sqlDataType" value="date" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="PostgreSQL" />
+          <option name="javaDataType" value="Long" />
+          <option name="sqlDataType" value="integer" />
+        </ConfigurableJPAMapping>
+        <ConfigurableJPAMapping>
+          <option name="family" value="PostgreSQL" />
+          <option name="sqlDataType" value="varchar" />
+        </ConfigurableJPAMapping>
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="aif-snapshots" />
+      <option name="name" value="Aif Snapshots" />
+      <option name="url" value="http://192.168.3.98:8081/nexus/content/repositories/aif-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tsie" />
+      <option name="name" value="TSIE" />
+      <option name="url" value="http://gz.tsintergy.com:28081/nexus/content/repositories/releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus3-release" />
+      <option name="name" value="Nexus3 Release" />
+      <option name="url" value="http://nexus3.gzdevops.tsintergy.com/repository/releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus" />
+      <option name="name" value="Nexus" />
+      <option name="url" value="http://gz.tsintergy.com:28081/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aif-thirdparty" />
+      <option name="name" value="Aif Thirdparty" />
+      <option name="url" value="http://192.168.3.98:8081/nexus/content/repositories/thirdparty/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus3-snapshots" />
+      <option name="name" value="Nexus3 Snapshots" />
+      <option name="url" value="http://nexus3.gzdevops.tsintergy.com/repository/snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aif-release" />
+      <option name="name" value="Aif Release" />
+      <option name="url" value="http://192.168.3.98:8081/nexus/content/repositories/aif-release/" />
+    </remote-repository>
+  </component>
+</project>
