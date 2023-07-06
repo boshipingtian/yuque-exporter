@@ -7,6 +7,7 @@ package org.example;
 import java.time.Duration;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.openqa.selenium.By;
@@ -24,19 +25,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class Main {
 
-    public static final String BASE_URL = "https://qpe5ta.yuque.com";
+    public static final String BASE_URL = "https://xxx.yuque.com";
 
     public static final String USERNAME = "xxxx";
 
-    public static final String PASSWORD = "xxxxxx";
+    public static final String PASSWORD = "xxxxx";
 
-    public static final String LIST_URL = "/qpe5ta/qstvvu";
+    public static final String LIST_URL = "/xx/xxx";
 
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get(BASE_URL + LIST_URL);
-        String title = driver.getTitle();
 
         loginMethod(driver);
         Thread.sleep(6000);
@@ -51,7 +51,7 @@ public class Main {
         Set<String> finalUrls = urls.stream().filter(s -> s.contains(BASE_URL + LIST_URL))
             .collect(Collectors.toSet());
         System.out.println("finalUrls = " + finalUrls);
-
+        System.out.println("需要下载 = " + finalUrls.size());
         // 根据Url下载文件
         urlToDownload(driver, finalUrls);
 
@@ -70,40 +70,62 @@ public class Main {
                 By.xpath("//*[@id=\"docHeadRightWrapper\"]/div/div[2]/div[2]"));
             element1.click();
             Thread.sleep(1000);
-
             // 获取下载按钮
-            WebElement element2 = driver.findElement(
-                By.cssSelector("#rc-tabs-1-panel-DocOpertaion > div > div > div:nth-child(3) > div:nth-child(5)"));
-            element2.click();
-            Thread.sleep(1000);
 
-            // 获取下面元素数量 如果是4个就下载，1个就不下载
-
-            List<WebElement> elements = driver.findElements(By.cssSelector(
-                "div.ant-modal-wrap > div > div.ant-modal-content > div > div > div > div.ant-spin-nested-loading > div > div > div > div"));
-
-            if (elements == null || elements.size() < 4) {
-                System.out.println("文件不能导出成markdown，文件名: " + driver.getTitle());
-                Thread.sleep(500);
-                driver.navigate().back();
-                Thread.sleep(500);
-                driver.navigate().back();
+            List<WebElement> elements = driver.findElements(
+                By.cssSelector("div.docOperationTabContent-module_menuText_kVtjJ"));
+            WebElement export = elements.stream().filter(webElement -> {
+                    String text = webElement.getText();
+                    return text.contains("导出");
+                }).findFirst()
+                .orElse(null);
+            if (Objects.isNull(export)) {
+                System.out.println("导出失败，没有找到导出按钮：" + driver.getTitle());
                 continue;
             }
+
+            export.click();
+            Thread.sleep(1000);
+
             WebElement element3 = driver.findElement(
                 By.cssSelector(
-                    "div.ant-modal-wrap > div > div.ant-modal-content > div > div > div > div.ant-spin-nested-loading > div > div > div > div:nth-child(2)"));
+                    "div.ant-modal-wrap > div > div.ant-modal-content > div > div > div > div.ant-spin-nested-loading > div > div > div > div:nth-child(1)"));
             element3.click();
 
-            // 点击下载按钮
-            Thread.sleep(1000);
-            WebElement element4 = driver.findElement(
-                By.cssSelector(
-                    "div.ant-modal-wrap > div > div.ant-modal-content > div > div > div > div > div:nth-child(3)"));
-            element4.click();
-            // 返回列表页
-            Thread.sleep(2000);
-            driver.navigate().back();
+            boolean downloading = true;
+
+            // 添加进度条
+            while (downloading) {
+                Thread.sleep(200);
+                try {
+                    WebElement element = driver.findElement(By.cssSelector(
+                        "div.ant-modal-wrap > div > div.ant-modal-content > div > div > div > div > p.icon"));
+                    if (Objects.nonNull(element)) {
+                        downloading = false;
+                        System.out.println("下载完成 = " + driver.getTitle());
+                    } else {
+                        try {
+                            WebElement error = driver.findElement(By.cssSelector(
+                                "div.ant-modal-wrap > div > div.ant-modal-content > div > div > div > p.icon"));
+                            if (Objects.nonNull(error)) {
+                                downloading = false;
+                                System.out.println("文件下载失败: " + driver.getTitle());
+                            }
+                        } catch (Exception ignore) {
+                        }
+                    }
+                } catch (Exception e) {
+                    try {
+                        WebElement error = driver.findElement(By.cssSelector(
+                            "div.ant-modal-wrap > div > div.ant-modal-content > div > div > div > p.icon"));
+                        if (Objects.nonNull(error)) {
+                            downloading = false;
+                            System.out.println("文件下载失败: " + driver.getTitle());
+                        }
+                    } catch (Exception ignore) {
+                    }
+                }
+            }
         }
     }
 
