@@ -34,16 +34,13 @@ public class Main {
     public static final String LIST_URL = "/xx/xxx";
 
     public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "/**/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get(BASE_URL + LIST_URL);
 
         loginMethod(driver);
-        Thread.sleep(6000);
-        WebElement element = driver.findElement(
-            By.xpath("/html/body/div[8]/div/div[2]/div/div[2]/button/span"));
-        element.click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         Set<String> urls = scrollToFind(driver);
         System.out.println("urls = " + urls);
 
@@ -149,7 +146,7 @@ public class Main {
         checkBox.click();
         Thread.sleep(200);
         WebElement login = driver.findElement(By.cssSelector(
-            "#ReactApp > div > div.lark.page-account.pc-web.lark-login > div > div:nth-child(1) > div > div > div > div.lark-form-content.form-pro > div > form > div:nth-child(4) > div > div > span > button"));
+            "#ReactApp > div > div.lark.page-account.pc-web.lark-login > div > div:nth-child(1) > div > div > div > div.lark-form-content.form-pro > div > form > div:nth-child(5) > div > div > span > button"));
         login.click();
     }
 
