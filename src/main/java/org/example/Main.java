@@ -1,7 +1,3 @@
-/**
- * Copyright(C),2015‐2023,北京清能互联科技有限公司
- */
-
 package org.example;
 
 import java.time.Duration;
@@ -16,13 +12,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-/**
- * <br>
- *
- * @Author: duanrq@tsintergy.com.cn
- * @Date: 2023/7/4 18:32
- * @Version: 1.0.0
- */
 public class Main {
 
     public static final String BASE_URL = "https://xxx.yuque.com";
